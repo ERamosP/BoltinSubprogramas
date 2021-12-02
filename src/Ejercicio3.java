@@ -11,12 +11,8 @@ public class Ejercicio3 {
     public static void main(String[] args) {
 
 
-        menu();
         elegirOpcion();
-        leerOpcion();
-
-
-    }
+     }
 
     /**
      * menu de las posibles acciones que puede realizar el usuario
@@ -50,6 +46,7 @@ public class Ejercicio3 {
 
         boolean salir = false;
         do {
+            menu();
             switch (leerOpcion()) {
                 case 1 -> System.out.println(hallarSuma(crearFraccion(pedirNumerador(), pedirDenominador()), crearFraccion(pedirNumerador(), pedirDenominador())));
                 case 2 -> System.out.println(hallarResta(crearFraccion(pedirNumerador(), pedirDenominador()), crearFraccion(pedirNumerador(), pedirDenominador())));
