@@ -16,7 +16,6 @@ public class Ejercicio7 {
             System.out.println("Introduce el denominador");
             datoM = sc.nextInt();
 
-
         } while (datoN < datoM);
 
         System.out.println(hallarCombinatorio(datoN, datoM));

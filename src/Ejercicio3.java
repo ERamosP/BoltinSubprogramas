@@ -81,8 +81,7 @@ public class Ejercicio3 {
      */
     public static double pedirDenominador() {
 
-
-        System.out.println("Introduzca un denominador");
+    System.out.println("Introduzca un denominador");
         return sc.nextDouble();
     }
 
