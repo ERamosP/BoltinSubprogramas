@@ -11,7 +11,9 @@ public class Ejercicio3 {
     public static void main(String[] args) {
 
 
-        elegirOpcion();
+    elegirOpcion();
+
+
      }
 
     /**
@@ -45,6 +47,7 @@ public class Ejercicio3 {
     public static void elegirOpcion() {
 
         boolean salir = false;
+
         do {
             menu();
             switch (leerOpcion()) {
