@@ -5,7 +5,8 @@ public class calculadoraJava {
 
     public static void main(String[] args) {
 
-         int num1, num2, suma;
+         int num1, num2, suma, contadorErrores=0;
+
          try{
 
 
@@ -18,7 +19,12 @@ public class calculadoraJava {
              System.out.println(suma);
 
          }catch (Exception e){
+             sc.nextLine();
              System.out.println("No has metido un numero " + e);
+         }finally {
+
+             contadorErrores++;
+             System.out.println(contadorErrores);
          }
 
     }
