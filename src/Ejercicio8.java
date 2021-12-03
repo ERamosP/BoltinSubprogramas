@@ -22,7 +22,7 @@ public class Ejercicio8 {
     }
     public static long hallarFactorial(long num) {
 
-        num=pedirDatos();
+
         long factorial = 1;
         for (long i = 1; i <= num; i++) {
             factorial = factorial * i;
@@ -32,26 +32,24 @@ public class Ejercicio8 {
 
     public static long hallarCombinatorio(long n, long m) {
 
-         n = hallarFactorial(pedirDatos());
-         m = hallarFactorial(pedirDatos());
+         long x = hallarFactorial(n);
+         long y = hallarFactorial(m);
         long restaFact = hallarFactorial(n-m);
 
 
-        return n / (m * restaFact);
+        return x / (y * restaFact);
     }
 
     public static void pintarPiramide(long altura){
 
 
-        for (long i=0;i<=altura-1;i++){
-            for (int k=0;k<=altura;k++){
-                System.out.print(k+" ");
-            }
-            for (long j=0;j<=i;i++){
-                System.out.print("");
-                System.out.print(hallarCombinatorio(i,j)+" ");
-            }
+        for (int i=0; i<altura; i++){
 
+            for(int j=0; j<=i;j++){
+                System.out.print(hallarCombinatorio(i,j));
+
+            }
+            System.out.println();
         }
 
     }
