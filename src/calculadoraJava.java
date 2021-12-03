@@ -1,32 +1,35 @@
 import java.util.Scanner;
 
 public class calculadoraJava {
-    static Scanner sc=new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-         int num1, num2, suma, contadorErrores=0;
+        int num1, num2, suma, contadorErrores = 0;
+        boolean seguir = false;
 
-         try{
+        do {
 
 
-        System.out.println("Introduce el numero 1");
-        num1=sc.nextInt();
-        System.out.println("Introduce el numero 2");
-        num2=sc.nextInt();
-        suma=num1+num2;
+            try {
 
-             System.out.println(suma);
+                seguir=true;
+                System.out.println("Introduce el numero 1");
+                num1 = sc.nextInt();
+                System.out.println("Introduce el numero 2");
+                num2 = sc.nextInt();
+                suma = num1 + num2;
 
-         }catch (Exception e){
-             sc.nextLine();
-             System.out.println("No has metido un numero " + e);
-         }finally {
+                System.out.println(suma);
 
-             contadorErrores++;
-             System.out.println(contadorErrores);
-         }
-
+            } catch (Exception e) {
+                seguir=false;
+                sc.nextLine();
+                System.out.println("No has metido un numero " + e);
+                contadorErrores++;
+            }
+        } while (!seguir);
+        System.out.println("Has tenido " +contadorErrores + " fallos");
     }
 
 }
